@@ -19,7 +19,7 @@ jobs:
 #      - name: Publish
 #        run: ./gradlew :samplelibrary:publish
       - name: Create file
-        run: touch testing.txt
+        run: touch testingg.txt
       - name: Create PR
         run: |
           git add .
