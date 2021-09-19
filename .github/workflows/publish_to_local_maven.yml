@@ -1,0 +1,11 @@
+name: publish_to_local_maven
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-to-local-maven:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
