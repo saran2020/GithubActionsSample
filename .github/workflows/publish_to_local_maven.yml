@@ -2,7 +2,7 @@ name: publish_to_local_maven
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   publish-to-local-maven:
