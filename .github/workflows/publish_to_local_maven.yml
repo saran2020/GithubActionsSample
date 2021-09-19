@@ -11,7 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Switch branch
-        run: git checkout -b new-library-version
+        run: |
+          git fetch
+          git checkout -b new-library-version origin/new-library-version
       - name: Publish
         run: ./gradlew :samplelibrary:publish
       - name: Create PR
