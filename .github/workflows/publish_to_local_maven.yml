@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish
-        run: ./graldew :samplelibrary:publish
+        run: ./gradlew :samplelibrary:publish
       - name: Create PR
         run: |
           gh pr create --title "New version of library"
