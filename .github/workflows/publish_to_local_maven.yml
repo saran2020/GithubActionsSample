@@ -22,6 +22,7 @@ jobs:
         run: |
           git add .
           git commit -m "New library version"
+          git push origin new-library-version
           gh pr create --title "New version of library"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
