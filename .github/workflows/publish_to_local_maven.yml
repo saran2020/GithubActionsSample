@@ -13,7 +13,7 @@ jobs:
       - name: Config git
         run: |
           git config user.name PR Bot
-          git congig user.email saran.sankaran@gmail.com
+          git config user.email saran.sankaran@gmail.com
       - name: Switch branch
         run: git checkout -b new-library-version
       - name: Publish
