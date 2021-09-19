@@ -20,7 +20,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "New library version"
-          git push orgin new-library-version
+          git push origin new-library-version
           gh pr create --title "New version of library" --body ""
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
