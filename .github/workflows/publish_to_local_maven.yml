@@ -16,10 +16,8 @@ jobs:
           git config user.email saran.sankaran@gmail.com
       - name: Switch branch
         run: git checkout -b new-library-version
-#      - name: Publish
-#        run: ./gradlew :samplelibrary:publish
-      - name: Create file
-        run: touch testingg.txt
+      - name: Publish
+        run: ./gradlew :samplelibrary:publish
       - name: Create PR
         run: |
           git add .
