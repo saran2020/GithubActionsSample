@@ -3,6 +3,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven( uri("$rootDir/mvn-libraries/"))
     }
 }
 
