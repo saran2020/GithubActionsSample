@@ -1,7 +1,5 @@
 name: Pull and build
-on:
-  repository_dispatch:
-    types: [ testing ]
+on: repository_dispatch
 
 jobs:
   publish-to-local-maven:
