@@ -1,37 +1,11 @@
-name: publish_to_local_maven
+name: publish_to_other_repo
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
+  repository_dispatch:
 
 jobs:
   publish-to-local-maven:
-    name: Publish to local maven
+    name: Publish to other repo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Switch branch
-        run: |
-          git fetch
-          git checkout -b new-library-version origin/new-library-version
-      - name: Publish
-        run: ./gradlew :samplelibrary:publish
-      - name: Create PR
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "New library version"
-          git push origin new-library-version
-          gh pr create --title "New version of library" --body ""
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Stop gradle
-        run: ./gradlew --stop
+      - name: Hellow world
+        run: echo "Hello world"
