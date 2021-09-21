@@ -1,11 +1,12 @@
-name: publish_to_other_repo
+name: Pull and build
 on:
   repository_dispatch:
+    types: [ testing ]
 
 jobs:
   publish-to-local-maven:
-    name: Publish to other repo
+    name: Pull and build
     runs-on: ubuntu-latest
     steps:
-      - name: Hellow world
+      - name: Hello world
         run: echo "Hello world"
