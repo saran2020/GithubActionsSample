@@ -14,4 +14,4 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/saran2020/GithubActionsSample/dispatches \
             -d '{"event_type":"testing"}'
-            -u saran2020:${{ secrets.GITHUB_TOKEN }}
+            -u saran2020:${{ secrets.GH_TOKEN }}
