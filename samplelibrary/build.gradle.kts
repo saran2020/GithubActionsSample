@@ -22,7 +22,7 @@ project.afterEvaluate {
         repositories {
             maven {
                 name = "Sample"
-                url = uri("$rootDir/mvn-libraries")
+                url = uri("${System.getenv("PUBLISH_PATH")}/mvn-libraries")
             }
         }
     }
